@@ -1,0 +1,3 @@
+allow init debugfs:file rw_file_perms;
+
+domain_trans(init, su_exec, su)

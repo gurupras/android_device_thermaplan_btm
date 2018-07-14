@@ -1,0 +1,2 @@
+/dev/socket/su_daemon    u:object_r:su_daemon_socket:s0
+/system/bin/su_daemon    u:object_r:su_exec:s0

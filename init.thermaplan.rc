@@ -1,0 +1,15 @@
+import /init.thermaplan_cpr.rc
+
+on property:sys.boot_completed=1
+    start su_daemon
+    # Enable thermaplan trace events
+    write /sys/kernel/debug/tracing/tracing_on 1
+    write /sys/kernel/debug/tracing/events/thermaplan/enable 1
+ 
+service su_daemon /system/bin/su_daemon
+    class core
+    user root
+    group root net_admin inet net_raw
+    disabled
+    seclabel u:r:su:s0
+

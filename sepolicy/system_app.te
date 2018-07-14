@@ -1,0 +1,5 @@
+unix_socket_connect(system_app, su_daemon, su)
+allow system_app su:unix_stream_socket { read write };
+allow system_app su_daemon_socket:sock_file rw_file_perms;
+allow system_app socket_device:sock_file rw_file_perms;
+
