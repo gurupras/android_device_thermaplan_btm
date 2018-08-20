@@ -1,4 +1,5 @@
 import /init.thermaplan_cpr.rc
+import /init.thermaplan_cgroup_fix.rc
 
 on property:sys.boot_completed=1
     start su_daemon
